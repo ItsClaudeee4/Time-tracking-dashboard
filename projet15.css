@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color:hsl(226, 43%, 10%) ;
+    display: grid;
+    place-items: center;
+}
+main{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+header{
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 17px;
+    width: 100%;
+}
+.profile{
+    background-color: hsl(246, 80%, 60%);
+    padding: 20px;
+    border-radius: 17px;
+    text-align: left;
+}
+.img{
+    background-color: white;
+   width: fit-content;
+   border-radius: 50%;
+    display: grid;
+    place-items: center;
+    padding: 2px;
+    margin-bottom: 30px;
+}
+.img img{
+    width: 60px;    
+}
+.profile p{
+    color:hsl(236, 100%, 87%);
+    font-size: 14px;
+}
+.profile h1{
+    font-weight: 300;
+    color: white;
+    margin-bottom: 50px;
+}
+header .date p{
+    color:hsl(235, 45%, 61%) ;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+header .date p:hover{
+    transform: scale(1.1);
+}
+header .date p:first-of-type{
+    margin-top: 20px;
+    color: white;
+}
+header .date p:last-of-type{
+    margin-bottom: 30px;
+}
+section{
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0;
+
+}
+.a{
+    background: url(icon-work.svg) no-repeat ;
+    background-color: hsl(15, 100%, 70%);
+    background-position: top -10px right 10px;
+}
+.b{
+    background: url(icon-play.svg) no-repeat ;
+    background-color: hsl(195, 74%, 62%);
+    background-position: top -10px right 10px;
+}
+.c{
+    background: url(icon-study.svg) no-repeat ;
+    background-color:  hsl(348, 100%, 68%);
+    background-position: top -10px right 10px;
+}
+.d{
+    background: url(icon-exercise.svg) no-repeat ;
+    background-color: hsl(145, 58%, 55%);
+    background-position: top -10px right 10px;
+}
+.e{
+    background: url(icon-social.svg) no-repeat ;
+    background-color:  hsl(264, 64%, 52%);
+    background-position: top -10px right 10px;
+}
+.f{
+    background: url(icon-self-care.svg) no-repeat ;
+    background-color:  hsl(43, 84%, 65%);
+    background-position: top -10px right 10px;
+}
+.types{
+    padding: 20px;
+    background-color:hsl(235, 46%, 20%) ;
+    border-radius: 15px; 
+    cursor: pointer;
+}
+.types:hover{
+    background-color:hsl(236, 46%, 36%) ;
+}
+.type{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.type p{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 14px;
+}
+.type i{
+    color:hsl(236, 100%, 87%);
+    font-size: 18px;
+    cursor: pointer;
+}
+.type i:hover{
+    color: white;
+}
+.types h1{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.types .value p{
+    color:hsl(236, 100%, 87%) ;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.hidden{
+    display: none;
+}
+
+@media (max-width:600px){
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    header .profile{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+    .profile p{
+        font-size: 12px;
+    }
+    .profile  h1{
+        font-size: 20px;
+        margin: 0;
+    }
+    .img{
+        height: fit-content;
+        margin: 0;
+    }
+    body{
+        padding: 20px;
+        padding-top: 50px;
+    }
+    .date{
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+       
+    }
+    header .date p{
+        margin-bottom: 0px;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    header .date p:first-of-type{
+        margin-top: 0px;
+    }
+    header .date p:last-of-type{
+        margin-bottom: 0px;
+    }
+    .type{
+        margin-bottom: 0;
+    }
+    .types .value{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .types .value p{
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    .types h1{
+        color: rgb(255, 255, 255);
+        font-weight: 300;
+        font-size: 26px;
+        margin-bottom: 0px;
+    }
+    .types{
+        margin-top: 30px;
+    }
+    .f{
+        margin-bottom: 50px;
+    }
+}
